@@ -1,0 +1,26 @@
+.bundle
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+.idea
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Trashes
+
+*/config/development
+*/logs/log-*.php
+*/logs/!index.html
+/_tmp/*
+
+node_modules/*
+bower_components/*
+
+*.log
+
+/.htaccess
+/package-lock.json
+/readme.html

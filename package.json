@@ -1,0 +1,71 @@
+{
+  "name": "calendar-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "author": "Vladislav Pelepan",
+  "license": "ISC",
+  "private": true,
+  "vars": {
+    "cssName": "main.min.css",
+    "cssTailwindName": "tailwind.min.css",
+    "cssVendorsName": "vendors.min.css"
+  },
+  "paths": {
+    "src": {
+      "base": "./src/assets/",
+      "img": "./src/assets/img/**/*",
+      "fonts": "./src/assets/fonts/**/*",
+      "jsFolder": "./src/assets/js/",
+      "jsModules": "./src/assets/js/modules/",
+      "js": "./src/assets/js/**/*.js",
+      "sass": "./src/assets/scss/**/*.scss",
+      "sassIncludes": "./src/assets/scss/",
+      "templates": "./src/templates/**/!(_)*.{html,twig}",
+      "templatesAndIncludes": "./src/templates/**/*.{html,twig}"
+    },
+    "dist": {
+      "base": "./public_html/assets/",
+      "css": "./public_html/assets/css/",
+      "js": "./public_html/assets/js/",
+      "img": "./public_html/assets/img/",
+      "fonts": "./public_html/assets/fonts",
+      "html": "./public_html/"
+    },
+    "tailwindcss": {
+      "config": "./src/assets/js/config/tailwindConfig.js"
+    },
+    "scss": [],
+    "templates": "./templates/"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "clean": "gulp cleanup"
+  },
+  "devDependencies": {
+    "gulp-babel": "^8.0.0",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "del": "^3.0.0",
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cached": "^1.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-filter": "^5.1.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-inheritance": "^1.1.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-uglify": "^3.0.1",
+    "run-sequence": "^2.2.1",
+    "yargs": "^13.2.1"
+  },
+  "dependencies": {}
+}

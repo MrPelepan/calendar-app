@@ -1,0 +1,153 @@
+.calendar-events {
+  position: relative;
+  display: flex;
+  z-index: 1;
+  width: 400px;
+
+  .calendar-events-inner {
+    width: 100%;
+    padding: 20px 40px 25px;
+
+    background-color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .calendar-events-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .events-container {
+
+    .event-date {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #29323f;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+
+      span {
+        font-weight: bold;
+        line-height: 1;
+        color: #29323f;
+      }
+
+      .event-day {
+        font-size: 52px;
+      }
+
+      .event-day-name {
+        font-size: 24px;
+      }
+    }
+
+    .event-warning {
+      opacity: .2;
+      font-size: 20px;
+    }
+
+    li {
+      position: relative;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .remove-event {
+        position: relative;
+        cursor: pointer;
+        font-weight: bold;
+        width: 10px;
+        height: 10px;
+
+        &::before {
+          content: '+';
+          position: absolute;
+          top: -7px;
+          transform: rotate(-45deg);
+          transition: .25s all;
+        }
+
+        &:hover::before {
+          color: #fb5965;
+        }
+      }
+    }
+  }
+
+  .calendar-add-event-wrapper {
+    display: flex;
+    align-items: flex-end;
+    min-height: 38px;
+      flex-shrink: 0;
+
+    .calendar-input {
+      width: 100%;
+      padding: 10px;
+      margin-right: 20px;
+
+      font-size: 14px;
+      outline: none;
+
+      border: none;
+      background-color: transparent;
+      border-bottom: 1px solid #fb5965;
+      transition: .25s all;
+
+      &:focus {
+        border-color: transparent;
+      }
+    }
+
+    .calendar-add-event {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      width: 35px;
+      height: 35px;
+
+      font-size: 24px;
+      color: #fff;
+
+      border: none;
+      border-radius: 50%;
+      background-color: #fb5965;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 40%;
+        height: 2px;
+        background-color: #fff;
+        transition: .25s all;
+      }
+
+      &::after {
+        transform: rotate(-90deg);
+      }
+
+      &:hover {
+        background-color: darken(#fb5965, 10%);
+      }
+
+      &:hover {
+        &::before {
+          transform: rotate(-90deg);
+        }
+
+        &::after {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+}
